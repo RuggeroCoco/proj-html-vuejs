@@ -1,9 +1,10 @@
 <script>
 import AppHeader from "./components/AppHeader.vue";
-import AppMain from "./components/AppMain.vue";
+import AppMain from "./components/Hero.vue";
+import Features from "./components/Features.vue"
 
 export default {
-  components: { AppHeader, AppMain },
+  components: { AppHeader, AppMain, Features },
   data() {
     return {
       menuItems: [
@@ -32,6 +33,23 @@ export default {
           url: "/",
         },
       ],
+      features: [
+        {
+          icon: "fa-user-group",
+          title: "Human Capital",
+          description: "Humanizing business: Harness the power of technology to improve the way people work"
+        },
+        {
+          icon: "fa-chart-pie",
+          title: "Core Business",
+          description: "It takes innovative approaches to trasform",
+        },
+        {
+          icon: "fa-gauge-high",
+          title: "Performance",
+          description: "Achieving maximum impact and value from investments in finance and supply chain",
+        },
+      ],
     };
   },
 };
@@ -40,6 +58,7 @@ export default {
 <template>
   <AppHeader :items="menuItems" />
   <AppMain />
+  <Features :items="features" />
 </template>
 
 <style scoped></style>
