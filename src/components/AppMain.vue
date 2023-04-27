@@ -1,20 +1,15 @@
 <script>
+import Hero from "./Hero.vue";
 export default {
-  name: "AppHeader",
+  components: { Hero },
+  data() {
+    return {};
+  },
 };
 </script>
 
 <template>
-  <div class="main"></div>
+  <Hero />
 </template>
 
-<style scoped lang="scss">
-.main {
-  background-image: url(../assets/images/hero-image.png);
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
-  // width: 100%;
-}
-</style>
+<style scoped></style>

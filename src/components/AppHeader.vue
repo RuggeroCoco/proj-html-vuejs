@@ -19,10 +19,10 @@ export default {
 <template>
   <div class="header">
     <div class="header-contacts d-flex justify-content-between">
-      <div class="header-contacts--left">
+      <div class="header-contacts-left">
         <i class="fa-solid fa-clock me-2"></i><span>{{ openingHours }}</span>
       </div>
-      <div class="header-contacts--right">
+      <div class="header-contacts-right">
         <a :href="'tel:' + contacts.phone">
           <i class="fa-solid fa-phone me-2"></i
           ><span class="me-3">{{ contacts.phone }}</span>
@@ -57,8 +57,8 @@ export default {
 .header-contacts {
   background-color: #24333d;
   padding: 0.8rem 17rem;
-  &--left,
-  &--right {
+  &-left,
+  &-right {
     color: #e3e7df;
     font-size: 13px;
   }
