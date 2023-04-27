@@ -1,6 +1,9 @@
 <script>
 export default {
   name: "AppHeader",
+  props: {
+    items: [],
+  },
   data() {
     return {
       openingHours: "Open Hours: Mon - Sat - 9:00 - 18:00",
@@ -35,13 +38,10 @@ export default {
     </div>
     <div class="header-menu d-flex justify-content-between">
       <div><img src="../assets/images/logo.png" alt="" /></div>
-      <div>
-        <a href="">HOME</a>
-        <a href="">ABOUT</a>
-        <a href="">SERVICIES</a>
-        <a href="">PRICING</a>
-        <a href="">BLOG</a>
-        <a href="">GET IN TOUCH</a>
+      <div class="d-flex">
+        <div v-for="item in items" :key="item.label">
+          <a :href="item.url">{{ item.label }}</a>
+        </div>
       </div>
     </div>
   </div>
