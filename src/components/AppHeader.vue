@@ -14,32 +14,47 @@ export default {
 </script>
 
 <template>
-  <!-- HEAD-BAR -->
-  <div class="head-bar d-flex justify-content-between">
-    <div class="head-bar--left">
-      <i class="fa-solid fa-clock me-2"></i><span>{{ openingHours }}</span>
-    </div>
-    <div class="head-bar--right">
-      <a :href="'tel:' + contacts.phone">
-        <i class="fa-solid fa-phone me-2"></i
-        ><span class="me-3">{{ contacts.phone }}</span>
+  <div class="header">
+    <div class="header-contacts d-flex justify-content-between">
+      <div class="header-contacts--left">
+        <i class="fa-solid fa-clock me-2"></i><span>{{ openingHours }}</span>
+      </div>
+      <div class="header-contacts--right">
+        <a :href="'tel:' + contacts.phone">
+          <i class="fa-solid fa-phone me-2"></i
+          ><span class="me-3">{{ contacts.phone }}</span>
         </a>
         <a :href="'mailto:' + contacts.email">
-      <i class="fa-solid fa-envelope me-2"></i
-      ><span class="me-3">{{ contacts.email }}</span>
-      </a>
-      <a href="/"><i class="fa-brands fa-facebook-f me-3"></i></a>
-      <a href="/"><i class="fa-brands fa-twitter me-3"></i></a>
-      <a href="/"><i class="fa-brands fa-linkedin-in"></i></a>
+          <i class="fa-solid fa-envelope me-2"></i
+          ><span class="me-3">{{ contacts.email }}</span>
+        </a>
+        <a href="/"><i class="fa-brands fa-facebook-f me-3"></i></a>
+        <a href="/"><i class="fa-brands fa-twitter me-3"></i></a>
+        <a href="/"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+    <div class="header-menu d-flex justify-content-between">
+      <div><img src="../assets/images/logo.png" alt="" /></div>
+      <div>
+        <a href="">HOME</a>
+        <a href="">ABOUT</a>
+        <a href="">SERVICIES</a>
+        <a href="">PRICING</a>
+        <a href="">BLOG</a>
+        <a href="">GET IN TOUCH</a>
+      </div>
     </div>
   </div>
-  <!-- HEAD-BAR -->
-  <!-- HEAD-MENU -->
-  .head-menu
 </template>
 
 <style scoped lang="scss">
-.head-bar {
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.header-contacts {
   background-color: #24333d;
   padding: 0.8rem 17rem;
   &--left,
@@ -50,6 +65,24 @@ export default {
   a {
     text-decoration: none;
     color: #e3e7df;
+  }
+}
+
+.header-menu {
+  align-items: center;
+  padding: 0.8rem 17rem;
+  a {
+    text-decoration: none;
+    color: white;
+    transition: all 300ms;
+    padding: 0.5rem;
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+  a:hover {
+    background-color: #0d7e7e;
+    border-radius: 5px;
   }
 }
 </style>
