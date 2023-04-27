@@ -40,7 +40,7 @@ export default {
   max-width: 20%;
 
   &:not(:last-child) {
-    margin-right: 1rem;
+    margin-right: 2rem;
   }
 }
 </style>

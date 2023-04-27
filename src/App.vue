@@ -2,9 +2,10 @@
 import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/Hero.vue";
 import Features from "./components/Features.vue"
+import Footer from './components/Footer.vue'
 
 export default {
-  components: { AppHeader, AppMain, Features },
+  components: { AppHeader, AppMain, Features, Footer },
   data() {
     return {
       menuItems: [
@@ -59,6 +60,7 @@ export default {
   <AppHeader :items="menuItems" />
   <AppMain />
   <Features :items="features" />
+  <Footer />
 </template>
 
 <style scoped></style>
