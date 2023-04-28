@@ -44,7 +44,6 @@ export default {
     </div>
 </template>
 
-
 <style scoped lang="scss">
 .company {
     width: 100%;

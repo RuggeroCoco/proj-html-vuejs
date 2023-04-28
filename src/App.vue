@@ -3,10 +3,12 @@ import AppHeader from "./components/AppHeader.vue";
 import AppMain from "./components/Hero.vue";
 import Features from "./components/Features.vue"
 import Company from "./components/Company.vue"
+import Services from "./components/Services.vue"
+import Pricing from "./components/Pricing.vue"
 import Footer from './components/Footer.vue'
 
 export default {
-  components: { AppHeader, AppMain, Features, Company, Footer, },
+  components: { AppHeader, AppMain, Features, Company, Services, Pricing, Footer, },
   data() {
     return {
       menuItems: [
@@ -62,6 +64,8 @@ export default {
   <AppMain />
   <Features :items="features" />
   <Company />
+  <Services />
+  <Pricing />
   <Footer />
 </template>
 
